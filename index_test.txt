@@ -1,0 +1,30 @@
+var assert = require("assert");
+var Calculate =  require('../index.js')
+
+describe('Calculate', () => {
+  describe('.factorial', () => {
+    it('will test if the output of 5! is equal to 120', () => {
+      const expected = 120;
+      const num = Calculate.factorial(5);
+      assert.equal(num , expected);
+    });
+
+    it ('tests if the output of 3! is equal to 6', () =>{
+      const expected = 6;
+      const num = Calculate.factorial(3);
+      assert.equal(num, expected);
+    });
+
+    it ('tests if the output of 0! is equal to 1', () =>{     const expected = 1;
+      const num = Calculate.factorial(0);
+      assert.equal(num, expected);
+    });
+
+     it ('tests if the output of -10! is equal to -3628800', () =>{    
+      const expected = -3628800;
+      const num = Calculate.factorial(-10);
+      assert.equal(num, expected);
+    });
+
+  });
+});
